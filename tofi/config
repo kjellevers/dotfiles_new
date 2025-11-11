@@ -37,5 +37,4 @@ drun-launch = true
 terminal = kitty
 
 # History
-history = true
-history-file = ~/.cache/tofi-drun-history
+history = false

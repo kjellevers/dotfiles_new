@@ -1,0 +1,58 @@
+# ~/.config/mako/config
+
+# Appearance
+font=JetbrainsMono Nerd Font 11
+background-color=#CECECE
+text-color=#494949
+border-color=#494949
+border-size=2
+border-radius=12
+padding=15
+margin=10
+
+# Layout
+width=350
+height=150
+max-visible=3
+sort=-time
+layer=overlay
+anchor=top-center
+
+# Icons
+icons=1
+max-icon-size=48
+icon-path=/usr/share/icons/Papirus-Dark
+
+# Behavior
+default-timeout=5000
+ignore-timeout=0
+
+# Grouping
+group-by=app-name
+
+# Urgency levels
+[urgency=low]
+background-color=#CECECE
+text-color=#494949
+border-color=#494949
+
+[urgency=normal]
+background-color=#CECECE
+text-color=#494949
+border-color=#494949
+
+[urgency=critical]
+background-color=#CECECE
+text-color=#494949
+border-color=#494949
+default-timeout=0
+
+# Application specific rules
+[app-name="volume"]
+border-color=#494949
+
+[app-name="brightness"]
+border-color=#494949
+
+[app-name="battery"]
+border-color=#494949

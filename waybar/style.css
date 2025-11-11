@@ -1,0 +1,196 @@
+/* E-Ink Waybar Theme */
+/* Inspired by e-ink displays with grayscale palette */
+* {
+    font-family: "JetBrains Mono";
+    font-size: 14px;
+}
+
+* {
+    background-color: transparent;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+/* Group styling - creates the joined rounded boxes */
+.modules-left > widget > * {
+    margin: 0 4px;
+}
+
+.modules-right > widget > * {
+    margin: 0 4px;
+}
+
+/* System group (Arch logo + workspaces) */
+#custom-arch,
+#workspaces {
+    background-color: #CECECE;
+    border: 1px solid #494949;
+    margin: 0;
+}
+
+#custom-arch {
+    color: #494949;
+    font-size: 25px;
+    padding: 0 15px;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+}
+
+#workspaces {
+    border-radius: 0 10px 10px 0;
+    padding: 0 8px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #494949;
+    background-color: transparent;
+    border-radius: 6px;
+    margin: 2px 3px;
+    transition: none;
+    border: 1px solid transparent;
+}
+
+#workspaces button.active {
+    background-color: transparent;
+    color: #494949;
+    border: 1px solid #494949;
+}
+
+#workspaces button.urgent {
+    background-color: transparent;
+    color: #494949;
+    border: 1px solid #494949;
+}
+
+/* Monitors group (CPU + Memory) */
+#cpu,
+#memory {
+    background-color: #CECECE;
+    border: 1px solid #494949;
+    padding: 0 12px;
+    color: #494949;
+    margin: 0;
+}
+
+#cpu {
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+}
+
+#memory {
+    border-radius: 0 10px 10px 0;
+}
+
+/* Center module - Clock */
+#clock {
+    color: #494949;
+    background-color: #CECECE;
+    padding: 0 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid #494949;
+}
+
+#clock:active {
+    background-color: #494949;
+    color: #CECECE;
+}
+
+/* Hardware group (all right side modules joined) */
+#backlight,
+#pulseaudio,
+#pulseaudio.microphone,
+#bluetooth,
+#network,
+#battery {
+    padding: 0 12px;
+    color: #494949;
+    background-color: #CECECE;
+    border: 1px solid #494949;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* First item in hardware group */
+#backlight {
+    border-radius: 10px 0 0 10px;
+}
+
+/* Remove right border for all except last */
+#backlight,
+#pulseaudio,
+#pulseaudio.microphone,
+#bluetooth,
+#network,
+#battery.bat0 {
+    border-right: none;
+}
+
+/* Last item in hardware group */
+#battery.bat1 {
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* State-specific styles without hover */
+#pulseaudio.muted {
+    color: #494949;
+}
+
+#pulseaudio.microphone.source-muted {
+    color: #494949;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+    color: #888888;
+}
+
+#bluetooth.connected {
+    color: #494949;
+    font-weight: bold;
+}
+
+#network.disconnected {
+    color: #888888;
+}
+
+#network.wifi {
+    color: #494949;
+}
+
+#network.ethernet {
+    color: #494949;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #494949;
+}
+
+#battery.warning:not(.charging) {
+    color: #666666;
+}
+
+#battery.critical:not(.charging) {
+    color: #333333;
+    font-weight: bold;
+}
+
+/* Click feedback for interactive elements */
+#workspaces button:active {
+}
+
+#cpu:active,
+#memory:active,
+#backlight:active,
+#pulseaudio:active,
+#bluetooth:active,
+#network:active,
+#battery:active {
+    background-color: #494949;
+    color: #CECECE;
+}

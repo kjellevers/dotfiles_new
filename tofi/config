@@ -1,0 +1,41 @@
+# ~/.config/tofi/config
+
+# Window appearance
+width = 600
+height = 400
+border-width = 2
+outline-width = 0
+corner-radius = 12
+padding-left = 20
+padding-top = 20
+padding-right = 20
+padding-bottom = 20
+
+# Colors
+background-color = #CECECE
+text-color = #494949
+prompt-color = #494949
+selection-color = #CECECE
+selection-background = #494949
+selection-background-padding = 8
+selection-background-corner-radius = 8
+border-color = #494949
+
+# Font
+font = JetbrainsMono Nerd Font
+font-size = 14
+
+# Text layout
+prompt-text = ">"
+num-results = 8
+result-spacing = 15
+
+# Behavior
+hide-cursor = true
+fuzzy-match = true
+drun-launch = true
+terminal = kitty
+
+# History
+history = true
+history-file = ~/.cache/tofi-drun-history
